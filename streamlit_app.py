@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import home, heatmap, upload, floodRank  # import your app modules here
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -8,9 +8,8 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = [
-    {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
-    {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
+    {"func": floodRank.app, "title": "Flood Risk Rank", "icon": "water"},
+
 ]
 
 titles = [app["title"] for app in apps]
@@ -36,12 +35,12 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
-        
-        Source code: <https://github.com/giswqs/streamlit-template>
+## **Team139**:
 
-        More menu icons: <https://icons.getbootstrap.com>
+
+*   [Ahmad AbuHussein Butmah](https://www.linkedin.com/in/ahmad-abuhussein-butmah-583aa3107/)
+*   [Ifechukwu MBAMALI](https://www.linkedin.com/in/ifechukwu-mbamali/)
+*   [Moeen M. Arbid](https://www.linkedin.com/in/moeen-m-arbid-2a474216/)
     """
     )
 
